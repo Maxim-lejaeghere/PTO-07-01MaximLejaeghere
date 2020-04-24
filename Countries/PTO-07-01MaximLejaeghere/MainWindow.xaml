@@ -1,0 +1,75 @@
+﻿<Window x:Class="PTO_07_01MaximLejaeghere.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PTO_07_01MaximLejaeghere"
+        mc:Ignorable="d"
+        Title="Countries" Height="500" Width="800">
+    <Grid RenderTransformOrigin="0.496,0.493" Background="AliceBlue" Margin="7,0,-7.4,0.4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+            
+            <ColumnDefinition Width="0.7*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0"  Content="Land" HorizontalContentAlignment="Center" FontSize="19"/>
+        <ComboBox Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0"  Name="comboLand" Height="30" Width="175" SelectionChanged="comboLand_SelectionChanged" />
+        
+        <Label Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="0"  Content="Stad" HorizontalContentAlignment="Center" FontSize="19"/>
+        <ComboBox Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0"  Name="comboStad" Height="30" Width="175" SelectionChanged="comboStad_SelectionChanged" />
+        
+        <Label Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="0"  Content="Bezienswaardigheid" HorizontalContentAlignment="Center" FontSize="19"/>
+        <ComboBox Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="0"  Name="comboBezienswaardigheid" Height="30" Width="175"  SelectionChanged="comboBezienswaardigheid_SelectionChanged" />
+
+        <Label Grid.ColumnSpan="2" Grid.Row="6" Grid.Column="0" HorizontalContentAlignment="Center"  Content="Officiële Talen" FontSize="17"/>
+        <ComboBox Grid.ColumnSpan="2" Name ="comboTalen" Grid.Row="7" Grid.Column="0" Height="30" Width="175" />
+        
+        <Label Grid.Row="8" Grid.Column="0"  Content="Bezocht:" HorizontalContentAlignment="Right" FontSize="17"/>
+        <Label Grid.Row="9" Grid.Column="0"  Content="Hoofdstad:" HorizontalContentAlignment="Right" FontSize="17"/>
+        <Label Grid.Row="10" Grid.Column="0"  Content="Munteenheid:" HorizontalContentAlignment="Right" FontSize="17"/>
+        <Label Grid.Row="11" Grid.Column="0"  Content="Nationale feestdag:" HorizontalContentAlignment="Right" FontSize="17"/>
+
+        <Label Name ="lblBezocht" Grid.Row="8" Grid.Column="1" HorizontalContentAlignment="Left" FontSize="17"/>
+        <Label Name ="lblHoofdStad" Grid.Row="9" Grid.Column="1" HorizontalContentAlignment="Left" FontSize="17"/>
+        <Label Name ="lblMunt" Grid.Row="10" Grid.Column="1" HorizontalContentAlignment="Left" FontSize="17"/>
+        <Label Name ="lblFeestDag" Grid.Row="11" Grid.Column="1" HorizontalContentAlignment="Left" FontSize="17"/>
+        <Label Name ="lblFout" Grid.Row="0" Grid.Column="3" HorizontalContentAlignment="Left" FontSize="17" Foreground="Red" />
+
+        <Label Grid.Row="1" Grid.Column="2"  Content="Land:" HorizontalContentAlignment="Right" FontSize="18"/>
+        <Label Grid.Row="2" Grid.Column="2"  Content="Stad:" HorizontalContentAlignment="Right" FontSize="18"/>
+        <Label Grid.Row="3" Grid.Column="2"  Content="Hoofdstad:" HorizontalContentAlignment="Right" FontSize="18"/>
+        <Label Grid.Row="4" Grid.Column="2"  Content="Munteenheid:" HorizontalContentAlignment="Right" FontSize="18"/>
+        <Label Grid.Row="5" Grid.Column="2"  Content="Officiële talen:" HorizontalContentAlignment="Right" FontSize="18"/>
+        <Label Grid.Row="6" Grid.Column="2"  Content="Feestdag:" HorizontalContentAlignment="Right" FontSize="18"/>
+        <Label Grid.Row="7" Grid.Column="2"  Content="Bezienwaardigheid:" HorizontalContentAlignment="Right" FontSize="18"/>
+        <Label Grid.Row="8" Grid.Column="2"  Content="Bezocht:" HorizontalContentAlignment="Right" FontSize="18"/>
+        
+        
+        <TextBox Grid.Row="1" Grid.Column="3" Name="txtLand" HorizontalAlignment="Left" Text="" Margin="2,2,5,2" Width="253" FontSize="17"/>
+        <TextBox Grid.Row="2" Grid.Column="3" Name="txtStad" HorizontalAlignment="Left" Text="" Margin="2,2,5,2" Width="253" FontSize="17"/>
+        <TextBox Grid.Row="3" Grid.Column="3" Name="txtHoofdstad" HorizontalAlignment="Left" Text="" Margin="2,2,5,2" Width="253" FontSize="17"/>
+        <TextBox Grid.Row="4" Grid.Column="3" Name="txtMunteenheid" HorizontalAlignment="Left" Text="" Margin="2,2,5,2" Width="253" FontSize="17"/>
+        <TextBox Grid.Row="5" Grid.Column="3" Name="txtTaal" HorizontalAlignment="Left" Text="" Margin="2,2,5,2" Width="253" FontSize="17"/>
+        <TextBox Grid.Row="6" Grid.Column="3" Name="txtFeestdag" HorizontalAlignment="Left" Text="" Margin="2,2,5,2" Width="253" FontSize="17"/>
+        <TextBox Grid.Row="7" Grid.Column="3" Name="txtBezienswaardigheid" HorizontalAlignment="Left" Text="" Margin="2,2,5,2" Width="253" FontSize="17"/>
+        <CheckBox Grid.Row="8" Grid.Column="3" Name="checkBezocht" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+        <Button Grid.Row="10" Grid.Column="3" Name="btnToevoegen" Content ="Toevoegen" Margin="15.2,6,14.6,0" FontSize="15" Height="27" VerticalAlignment="Top" Click="btnToevoegen_Click"/>
+        <Button Grid.Row="11" Grid.Column="3" Name="btnAfsluiten" Content ="Afsluiten" Margin="15,6,15,6" FontSize="15" Click="btnAfsluiten_Click"/>
+    </Grid>
+</Window>
